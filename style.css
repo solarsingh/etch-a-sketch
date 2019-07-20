@@ -1,0 +1,23 @@
+#container{
+    display:grid;
+
+ 
+    grid-template-columns: repeat(50, 20px);
+
+
+}
+
+.content{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(137, 43, 226);
+}
+
+.trail{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+#test{
+    background-color: blue;
+}
