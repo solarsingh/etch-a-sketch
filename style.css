@@ -1,16 +1,16 @@
 #container{
     display:grid;
+    width: 600px;
+    height: 600px; 
+    
+    
 
- 
-    grid-template-columns: repeat(50, 20px);
-
-
+    background-color: green;
 }
 
 .content{
-    width: 20px;
-    height: 20px;
-    background-color: rgb(137, 43, 226);
+    
+    background-color: violet;
 }
 
 .trail{
@@ -18,6 +18,31 @@
     height: 20px;
     background-color: red;
 }
+
+.rangeslider{
+    width: 50%;
+    }
+
+    .myslider {
+        -webkit-appearance: none;
+        background: #FCF3CF  ;
+        width: 50%;
+        height: 20px;
+        opacity: 2;
+       }
+
+
+       .myslider:hover {
+        opacity: 1;
+    }
+
+    .myslider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        cursor: pointer;
+        background: #34495E  ;
+        width: 5%;
+        height: 20px;
+    }
 #test{
     background-color: blue;
 }

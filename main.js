@@ -1,29 +1,39 @@
 const container = document.querySelector('#container');
 
-for (i=0; i<2500; i++){
+canvasWidth=600;
+canvasHeight=600;
+squarePerSide=100;
+squareSide=canvasWidth/squarePerSide;
 
-    square = document.createElement('div');
-    square.classList.add('content');
+container.style.gridTemplateColumns= `repeat(${squarePerSide}, ${squareSide}px)`;
+container.style.gridTemplateRows= `repeat(${squarePerSide}, ${squareSide}px)`;
 
-    square.addEventListener('mouseover', function(e) {
-        changeColor(e.target);
-    })
-
-    container.appendChild(square);   
+function createCanvas(){
     
+    for (i=0; i<(squarePerSide*squarePerSide); i++){
+
+        square = document.createElement('div');
+        square.classList.add('content');
+        square.addEventListener('mouseover', function(e) {
+            changeColor(e.target);
+        });
     
+        container.appendChild(square);   
+    
+    }
 }
 
-const container2 = document.querySelector('#test');
-let content1 = document.createElement('p');
-content1.classList.add('content2');
-content1.textContent='This is Text';
-content1.addEventListener('mouseover', () => {
-    console.log('the event fired fine' );
-    changeColor(content1);
+let resetBtn = document.querySelector('#reset');
+    resetBtn.addEventListener('click', () => { 
+    reset();
 });
-container2.appendChild(content1);
-//console.log(container2);
+
+function reset(){
+    const cell = document.querySelectorAll(".content");
+    console.log(cell);
+    cell.forEach(cell=>cell.style.backgroundColor="violet"); 
+    
+}
 
 function changeColor(target){
     
@@ -32,3 +42,13 @@ function changeColor(target){
     console.log(target)
 
 }
+
+var rangeslider = document.getElementById("sliderRange");
+var output = document.getElementById("demo");
+output.innerHTML = rangeslider.value;
+
+rangeslider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+createCanvas();
