@@ -1,48 +1,76 @@
-#container{
-    display:grid;
-    width: 600px;
-    height: 600px; 
-    
-    
+body{
+    width: 100%;
+    background-color: rgb(199,234,70);
+}
 
-    background-color: green;
+#header{
+    width: 50%;
+    margin: 0px auto;
+    background-color: rgb(229,76,84);
+    border-style: solid;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 10px;
+}
+
+h1{
+    height: 70px;
+    margin: 0 auto;
+    text-align: center;
+    font: 4em "courier new";
+    font-style: oblique;
+    text-decoration: underline;
+}
+
+#main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-gap: 5px;
+}
+
+#container{
+    margin: 10px 100px;
+    display:grid;
+    width: 450px;
+    height: 450px; 
+    border-style: ridge;
+    border-radius: 10px;
+    border-color: red;
+    border-width: 15px;
 }
 
 .content{
-    
-    background-color: violet;
+    background-color:rgb(255, 255, 255);
 }
 
-.trail{
-    width: 20px;
-    height: 20px;
-    background-color: red;
+#buttons{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 10px; 
+    justify-items: end;
+    align-items: end;
 }
 
-.rangeslider{
-    width: 50%;
-    }
-
-    .myslider {
-        -webkit-appearance: none;
-        background: #FCF3CF  ;
-        width: 50%;
-        height: 20px;
-        opacity: 2;
-       }
-
-
-       .myslider:hover {
-        opacity: 1;
-    }
-
-    .myslider::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        cursor: pointer;
-        background: #34495E  ;
-        width: 5%;
-        height: 20px;
-    }
-#test{
-    background-color: blue;
+.button {
+    background-color: rgb(0,191,255); 
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
 }
+
+.button:hover {
+    background-color: rgb(0,150,255);
+    border: none;
+    border-radius: 20px;
+    color:rgb(200, 200, 200);
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: bold;
+    font-size: 20px;
+}
+
